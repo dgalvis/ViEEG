@@ -11,11 +11,6 @@ Freesurfer, version: 6.0.0 (Follow the link for installation of Freesurfer6 http
 
 This code is found in the source reconstruction directory.
 
-
-Dynamical network models:
-
-
-
 Compare results against existing clinical localisation:
 The outputs of dynamical network models can be compared against clinical localisation at nodal level. The Excel file (clinical_localisations_for_comparison.xlsx) under folder sample_data/ contains data of existing clinical localisations for patient 1 and 4, as examples. The clinical localisations include resection margin (column resection_margin in Excel file), pathology identified by MRI (column MRI_pathology), seizure onset zone (SOZ) identified by iEEG if applicable (column iEEG_SOZ), abnormality identified by PET (column PET_abnormality), early-phase of MEG source localisation (column early-MSL), middle-phase of MEG source localisation (column mid-MSL), late-phase of MEG source localisation (column late-MSL) and the earliest solution of MEG source localisation and EEG source localisation (column earliest_solution). Value zero/0 means the ViEEG electrode is not in a clinical localisation and value one/1 means the ViEEG electrode is in a clinical localisation. N/A in MRI_pathology or PET_abnormality means a clinical localisation is reported as normal/negative. N/A in iEEG_SOZ means either iEEG recording was not conducted on this patient or clinical iEEG data is not available to us (patients from external surgical centres).
 
