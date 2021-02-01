@@ -124,6 +124,7 @@ output.a.CC.results{1} - This contains a second way of ordering the nodes (which
                          The docstrings outline what is contained in this struct but they were not used by M. Cao in his final analysis (He used output.a.CC.NI_out{1}). 
                          M.Cao did have access to output.a.CC.results{1}.sig and output.a.CC.results{1}.sigbh, which use a ranksum test to determine the significant nodes.
                          sig (ranksum) and sigbh (with Bonferroni Holms) compares the BNI of the 128 runs with node i removed to the 128 x (num_nodes -1) runs where i neq j is removed.
+(same idea for MI)
 
 
 
