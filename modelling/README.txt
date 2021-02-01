@@ -64,6 +64,8 @@ TO RUN: ./run_job.sh (must be executable chmod +x) after dependencies are correc
 2) Edit the config files, these are found in subdirectories of net_results. This is where you add the frequency band of interest, the patient filenames (and seizure epoch times), the method used.
 (example ./net_results/CC for the CC method with patient 1 and 4, number of surrogates has been reset to 19 to make it run faster in examples)
 
+2b) There are params in ModelRun.m for the dynamical systems modelling you wish to change as well. This is T: how long to run each dynamical system, n_n: how many runs for noise (in manuscript I used 128, for example I use 8 to make it run in reasonable time without HPC).
+
 3) Create Networks using python
 ipython NetRun.py ./CC
 ipython NetRun.py ./MI
@@ -84,7 +86,9 @@ These have already been run. The sample results are included in the repository. 
 1) Random numbers are used in surrogate generation and mathematical modelling
 2) 19 surrogates are used for CC instead of 199 in the manuscript (this is so running examples if faster for you)
 3) The example data is trimmed down for file size. Running the band pass filtering and resampling may be slightly affected by this.
-However, the results have been checked and are very similar despite these things. The results used for publication are available upon request.
+4) For mathematical modelling, fewer dynamical systems runs are used in the example (8 instead of 128 as in the manuscript).
+However, the results have been checked and are very similar despite these things (The top ictogenic nodes predicted are the same, but using fewer noise runs (4) makes the solution more variable). 
+The results used for publication are available upon request.
 
 ipython NetRun.py ./CC: Creates .mat files in ./net_results/CC with the same filenames as the patient filenames
                         These contain structs (one for each frequency band in the config file). In example, this is a struct called "a"
